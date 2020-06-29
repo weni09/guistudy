@@ -53,7 +53,7 @@ class Example(QWidget):
         self.setWindowTitle('Review')
         self.show()
 
-
+####测试git修改提交
 if __name__ == '__main__':
 
     app = QApplication(sys.argv)
