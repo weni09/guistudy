@@ -97,6 +97,7 @@ class window(QWidget):
             print("占我嘎哈?")
         btn.clicked.connect(slot)
         #***********************信号与槽案例************************结束
+
 def QWidget控件的父子关系():
     app = QApplication(sys.argv)
     qssStayle  = CommonHelper.readQss('./QObject.qss')
@@ -130,11 +131,11 @@ def QObject信号与槽案例():
     wd.show()
     sys.exit(app.exec())
 if __name__ == '__main__':
-    # app = QApplication(sys.argv)
+    app = QApplication(sys.argv)
     # QWidget控件的父子关系()
-    QObject信号与槽案例()
-    # wd = window()
-    # wd.resize(500,500)
-    # wd.setWindowTitle("OObject的学习")
-    # wd.show()
-    # sys.exit(app.exec())
+    # QObject信号与槽案例()
+    wd = window()
+    wd.resize(500,500)
+    wd.setWindowTitle("OObject的学习")
+    wd.show()
+    sys.exit(app.exec())
