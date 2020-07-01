@@ -3,18 +3,17 @@
 #===================================================
 # @Time : 2020/6/29 15:50
 # @Author : weni09
-# @File : test2.py
+# @File : test1.py
 #===================================================
-import sys
-from PyQt5.Qt import *
+
+from PyQt5.QtCore import QObject
+from PyQt5.QtWidgets import QWidget
 
 class window(QWidget):
     def __init__(self):
         super().__init__()
         self.setup_ui()
     def setup_ui(self):
-
-
         obj0 = QObject()
         obj1 = QObject()
         obj2 = QObject()
@@ -36,12 +35,8 @@ class window(QWidget):
         obj4.setParent(obj2)
         obj5.setParent(obj2)
 
+        # print(obj1.parent())
+        # print(obj2.parent())
         # print(obj0.children())
-        # print(obj0.findChildren(QObject,None,Qt.FindDirectChildrenOnly))
+        # print(obj0.findChildren(QObject,None,Qt.FindChildrenRecursively))
         # print(obj0.findChild(QObject,"3",Qt.FindChildrenRecursively))
-        
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    wd = window()
-    #wd.show()
-    sys.exit(app.exec())
