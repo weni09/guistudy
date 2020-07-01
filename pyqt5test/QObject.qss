@@ -1,0 +1,7 @@
+QWidget#one{
+background-color: red;
+}
+
+QWidget#one[one_level="normal"]{
+background-color: green;
+}

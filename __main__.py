@@ -6,7 +6,7 @@
 # @File : __main__.py
 #===================================================
 import sys
-from pyqt5test.test1 import window
+from pyqt5test. import window
 from PyQt5.QtWidgets import QApplication
 
 
