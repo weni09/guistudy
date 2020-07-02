@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #===================================================
 # @Time : 2020/6/29 15:50
@@ -93,6 +93,7 @@ class window(QWidget):
         #***********************信号与槽案例************************开始
         btn = QPushButton(self)
         btn.setText("点击我")
+        btn.move(150,150)
         def slot():
             print("占我嘎哈?")
         btn.clicked.connect(slot)
@@ -135,7 +136,7 @@ if __name__ == '__main__':
     # QWidget控件的父子关系()
     # QObject信号与槽案例()
     wd = window()
-    wd.resize(500,500)
+    wd.resize(400,400)
     wd.setWindowTitle("OObject的学习")
     wd.show()
     sys.exit(app.exec())
