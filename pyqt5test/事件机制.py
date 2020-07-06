@@ -18,10 +18,12 @@ class App(QApplication):
         return super().notify(recevier,evt)
 
 class Btn(QPushButton):
+    # 事件方法重写
     def event(self,evt):
         if evt.type() == QEvent.MouseButtonRelease:
            print("按钮被点击了-Ww",evt)
         return super().event(evt)
+    # 点击鼠标事件方法重写
     def mouseReleaseEvent(self,evt):
         print("鼠标被松开了")
         return super().mouseReleaseEvent(evt)
