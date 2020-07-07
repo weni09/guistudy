@@ -15,7 +15,7 @@ class window(QWidget):
     def setup_ui(self):
         pass
 
-
+####控件的位置和大小
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     wd = window()
@@ -39,7 +39,7 @@ if __name__ == '__main__':
         #w.move(widget_x,widget_y)
         w.setGeometry(widget_x,widget_y,widget_w,widget_h)
         #w.resize(100,100)
-        w.setStyleSheet("background-color: red;border: 1px solid yellow;")
+        w.setStyleSheet("background-color: gray;border: 1px solid red;")
 
     wd.show()
     sys.exit(app.exec())
