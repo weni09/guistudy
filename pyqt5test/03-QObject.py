@@ -9,7 +9,7 @@ import sys
 from PyQt5.QtCore import QObject
 from PyQt5.QtWidgets import QWidget,QApplication,QPushButton
 from PyQt5.QtCore import Qt
-# from PyQt5.Qt import *
+
 class CommonHelper:
     def __init__(self):
         pass

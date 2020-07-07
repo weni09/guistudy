@@ -7,7 +7,7 @@
 #===================================================
 
 import sys
-from PyQt5.Qt import *
+from PyQt5.QtWidgets import QWidget,QApplication
 class window(QWidget):
     def __init__(self):
         super().__init__()
@@ -27,8 +27,7 @@ if __name__ == '__main__':
     # 列数
     column_num = 5
     # 控件列行距
-    column_interval = 10
-    row_interval = 10
+    column_interval,row_interval = 10,10
     #控件宽和高
     widget_w = (500-(column_num-1)*column_interval) / column_num
     widget_h = (500 + row_interval) / (widget_count/column_num) - row_interval
@@ -36,10 +35,11 @@ if __name__ == '__main__':
         w = QWidget(wd)
         widget_x = (i % column_num) * (widget_w + column_interval)
         widget_y = (i // column_num) * (widget_h + row_interval)
-        w.resize(widget_w,widget_h)
-        w.move(widget_x,widget_y)
+        #w.resize(widget_w,widget_h)
+        #w.move(widget_x,widget_y)
+        w.setGeometry(widget_x,widget_y,widget_w,widget_h)
         #w.resize(100,100)
-        w.setStyleSheet("background-color:red;border: 1px solid yellow;")
+        w.setStyleSheet("background-color: red;border: 1px solid yellow;")
 
     wd.show()
     sys.exit(app.exec())
