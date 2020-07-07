@@ -6,10 +6,7 @@
 # @File : test2.py
 #===================================================
 
-from PyQt5.Qt import *
-def getSubClasses(cls):
-    for subcls in cls.__subclasses__():
-        print(subcls)
-        if len(cls.__subclasses__())>0:
-            getSubClasses(subcls)
-getSubClasses(QWidget)
+
+print(500/3)
+print(500//3)
+print(500%3)

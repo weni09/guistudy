@@ -21,14 +21,25 @@ if __name__ == '__main__':
     wd = window()
     wd.setWindowTitle("QWidget案例")
     wd.resize(500,500)
-    wd.move(300,300)
+    wd.move(600,300)
     # 总的控件个数
-    widget_count = 20
+    widget_count = 100
     # 列数
+    column_num = 5
+    # 控件列行距
+    column_interval = 10
+    row_interval = 10
+    #控件宽和高
+    widget_w = (500-(column_num-1)*column_interval) / column_num
+    widget_h = (500 + row_interval) / (widget_count/column_num) - row_interval
     for i in range(widget_count):
         w = QWidget(wd)
-        w.resize(100,100)
-        w.setStyleSheet("background-color:red;border")
+        widget_x = (i % column_num) * (widget_w + column_interval)
+        widget_y = (i // column_num) * (widget_h + row_interval)
+        w.resize(widget_w,widget_h)
+        w.move(widget_x,widget_y)
+        #w.resize(100,100)
+        w.setStyleSheet("background-color:red;border: 1px solid yellow;")
 
     wd.show()
     sys.exit(app.exec())
