@@ -39,7 +39,7 @@ if __name__ == '__main__':
         #w.move(widget_x,widget_y)
         w.setGeometry(widget_x,widget_y,widget_w,widget_h)
         #w.resize(100,100)
-        w.setStyleSheet("background-color: gray;border: 1px solid red;")
+        w.setStyleSheet("background-color: cyan;border: 1px solid red;")
 
     wd.show()
     sys.exit(app.exec())
