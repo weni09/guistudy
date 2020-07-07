@@ -24,7 +24,7 @@ if __name__ == '__main__':
     label.setText("中国梅花草日光灯发到")
     label.resize(300,300)
     label.setStyleSheet("background-color:cyan;")
-    label.setContentsMargins(100,200,0,0)
+    label.setContentsMargins(170,270,0,0)
     print(label.contentsRect())
     print(label.getContentsMargins())
     wd.show()
